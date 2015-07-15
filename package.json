@@ -1,0 +1,39 @@
+{
+  "name": "tojson-loader",
+  "version": "1.0.0",
+  "description": "Cache module.exports as JSON.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "webpack": "^1.10.1",
+    "node-libs-browser": "^0.5.2",
+    "tape": "^4.0.0"
+  },
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "keywords": [
+    "webpack",
+    "json",
+    "loader",
+    "serialise",
+    "static"
+  ],
+  "author": "Tim Oxley <secoif@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.10.1",
+    "tape": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoxley/tojson-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timoxley/tojson-loader/issues"
+  },
+  "homepage": "https://github.com/timoxley/tojson-loader#readme"
+}
