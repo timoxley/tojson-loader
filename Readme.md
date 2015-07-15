@@ -79,8 +79,7 @@ Note:
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = {"readme":"# tojson-loader\n\n#","random":0.18059769039973617}
-
+	module.exports = {"readme":"# tojson-loader","random":0.5418716457206756}
 
 /***/ }
 /******/ ]);
