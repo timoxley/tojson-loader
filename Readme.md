@@ -1,6 +1,8 @@
 # tojson-loader
 
-## Cache module.exports as JSON.
+Cache module.exports as JSON.
+
+----
 
 * Removes need to ship dependencies to the client.
 * Avoids cost of generating data at run-time.
