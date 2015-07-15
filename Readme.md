@@ -10,6 +10,10 @@ Useful for doing things like loading config or mock data into client.
 
 Note serialisation to JSON means only supports JSON data types i.e. Can't serialise Functions or Date objects.
 
+## Example
+
+This is an excerpt from the [test](https://github.com/timoxley/tojson-loader/tree/master/test) directory.
+
 ```js
 // webpack.config.js
 module.exports = {
@@ -53,7 +57,14 @@ console.log(require('./data.json.js'))
 
 #### Result
 
-The transformed output after being built by webpack:
+The transformed output after being built by webpack is below.
+
+Note:
+
+* No dependencies on any of the modules used.
+* Result of `fs.readFileSync` is baked into the output.
+* `random` key will always be the same value until next build.
+* `tape` key doesn't exist because JSON can't serialise functions.
 
 ```js
 ...
