@@ -1,6 +1,6 @@
+var fs = require('fs')
 var exec = require('child_process').exec
 var test = require('tape')
-var fs = require('fs')
 
 var TEST_DIR = __dirname + '/simple'
 var TEST_FILE = TEST_DIR + '/build.js'
@@ -20,11 +20,4 @@ test('tojson-loader ', function(t) {
     t.ok(build.indexOf('require(\'tape\')') === -1, 'does not contain dependencies')
     t.end()
   })
-})
-
-test('teardown', function(t) {
-  //fs.unlink(TEST_FILE, function(err) {
-    // ignore err
-    t.end()
-  //})
 })
