@@ -1,6 +1,8 @@
 # tojson-loader
 
-#### Cache module.exports as JSON.
+#### Serialize module exports as JSON.
+
+Cache generated static data as JSON at build time.
 
 * Removes need to ship dependencies to the client.
 * Avoids cost of generating data at run-time.
