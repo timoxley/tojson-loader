@@ -1,15 +1,15 @@
 {
   "name": "tojson-loader",
   "version": "1.0.0",
-  "description": "Cache module.exports as JSON.",
+  "description": "Serialize module exports as JSON. Cache generated static data as JSON at build time.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
-    "webpack": "^1.10.1",
+    "webpack": "^1.11.0",
     "node-libs-browser": "^0.5.2",
-    "tape": "^4.0.0"
+    "tape": "^4.0.3"
   },
   "scripts": {
     "test": "tape test/index.js"
@@ -19,14 +19,19 @@
     "json",
     "loader",
     "serialise",
+    "serialize",
+    "generated",
+    "cache",
+    "universal",
+    "isomorphic",
     "static"
   ],
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "node-libs-browser": "^0.5.2",
-    "webpack": "^1.10.1",
-    "tape": "^4.0.0"
+    "webpack": "^1.11.0",
+    "tape": "^4.0.3"
   },
   "repository": {
     "type": "git",
