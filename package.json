@@ -1,6 +1,6 @@
 {
   "name": "tojson-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Serialize module exports as JSON. Cache generated static data as JSON at build time.",
   "main": "index.js",
   "directories": {
