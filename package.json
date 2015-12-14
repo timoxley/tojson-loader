@@ -7,9 +7,9 @@
     "test": "test"
   },
   "devDependencies": {
-    "webpack": "^1.11.0",
-    "node-libs-browser": "^0.5.2",
-    "tape": "^4.0.3"
+    "node-libs-browser": "^0.5.3",
+    "tape": "^4.2.2",
+    "webpack": "^2.0.1-beta"
   },
   "scripts": {
     "test": "tape test/index.js"
@@ -29,9 +29,6 @@
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.11.0",
-    "tape": "^4.0.3"
   },
   "repository": {
     "type": "git",
