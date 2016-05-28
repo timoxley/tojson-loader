@@ -4,11 +4,12 @@
 
 If every client needs access to a shared chunk of data, and that data can be known at build time, a simple option is to bake that data into clientside build with `tojson-loader`.
 
-#### Potential Benefits
+#### Benefits
 
 * Having shared, static data preloaded in the client can improve performance/UX & reduce complexity.
 * Use whatever tools you need to generate the data on the serverside, no need to worry about shipping or shimming them on the client.
 * Reduce client-side processing load. Perform expensive calulations only once, on the server, at build-time.
+* Designed so tojson scripts can be transparently universal. Will run dynamic version on server & load static version on client.
 
 Particularly useful for loading configuration and/or mock data into the client.
 
