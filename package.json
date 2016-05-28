@@ -9,10 +9,12 @@
   "devDependencies": {
     "node-libs-browser": "^0.5.3",
     "tape": "^4.2.2",
-    "webpack": "^2.0.1-beta"
+    "webpack": "^2.0.1-beta",
+    "standard": "^7.1.1"
   },
   "scripts": {
-    "test": "tape test/index.js"
+    "test": "tape test/index.js && npm run lint",
+    "lint": "standard"
   },
   "keywords": [
     "webpack",
@@ -28,8 +30,7 @@
   ],
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/timoxley/tojson-loader.git"

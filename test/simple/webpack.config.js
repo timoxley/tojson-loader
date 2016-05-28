@@ -1,3 +1,5 @@
+var path = require('path')
+
 module.exports = {
   entry: './index.js',
   output: {
@@ -10,7 +12,7 @@ module.exports = {
       {
         // Use *.json.js extension to bake exported JS data into JSON
         test: /\.json\.js/,
-        loader: __dirname + '/../../index.js'
+        loader: path.join(__dirname, '/../../index.js')
       }
     ]
   }
