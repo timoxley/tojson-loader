@@ -7,10 +7,10 @@
     "test": "test"
   },
   "devDependencies": {
-    "node-libs-browser": "^0.5.3",
-    "tape": "^4.2.2",
-    "webpack": "^2.0.1-beta",
-    "standard": "^7.1.1"
+    "node-libs-browser": "^1.0.0",
+    "standard": "^7.1.1",
+    "tape": "^4.5.1",
+    "webpack": "^2.1.0-beta.7"
   },
   "scripts": {
     "test": "tape test/index.js && npm run lint",
