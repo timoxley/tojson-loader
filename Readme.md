@@ -6,12 +6,9 @@ If every client needs access to a shared chunk of data, and that data can be kno
 
 #### Potential Benefits
 
-Having shared, static data preloaded in the client has a range of benefits:
-
-* Access data & APIs only available on the server without needing to expose an endpoint or shim calls to `fs` etc.
+* Having shared, static data preloaded in the client can improve performance/UX & reduce complexity.
+* Use whatever tools you need to generate the data on the serverside, no need to worry about shipping or shimming them on the client.
 * Reduce client-side processing load. Perform expensive calulations only once, on the server, at build-time.
-* Remove unncessary network calls & associated latency.
-* Reduce number of dependencies you're shipping to the client.
 
 Particularly useful for loading configuration and/or mock data into the client.
 
