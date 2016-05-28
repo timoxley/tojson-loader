@@ -1,20 +1,25 @@
 # tojson-loader
 
-#### Serialize module exports as JSON.
+## Generate JSON assets at build-time
 
-Cache generated static data as JSON at build time.
+If every client needs access to a shared chunk of data, and that data can be known at build time, the simplest option is to bake that data into clientside build with `tojson-loader`.
 
-* Removes need to ship dependencies to the client.
-* Avoids cost of generating data at run-time.
-* Allows you to depend on compile-time-only data and dependencies e.g. calls to `fs` or `crypto`
+#### Potential Benefits
 
-Useful for doing things like loading config or mock data into client.
+Having shared, static data preloaded in the client has a range of benefits:
 
-Note serialisation to JSON means only supports JSON data types i.e. Can't serialise Functions or Date objects.
+* Access data & APIs only available on the server without needing to expose an endpoint or shim calls to `fs` etc.
+* Reduce client-side processing load. Perform expensive calulations only once, on the server, at build-time.
+* Remove unncessary network calls & associated latency.
+* Reduce number of dependencies you're shipping to the client.
 
-## Example
+Particularly useful for loading configuration and/or mock data into the client.
 
-This is an excerpt from the [test](https://github.com/timoxley/tojson-loader/tree/master/test) directory.
+### Caveats
+
+* Only supports JSON data types i.e. JSON can't natively serialise `Function` or `Date` objects.
+
+## Usage
 
 ```js
 // webpack.config.js
@@ -32,6 +37,8 @@ module.exports = {
   }
 }
 ```
+
+### Example `.json.js` file
 
 ```js
 // data.json.js
@@ -57,13 +64,13 @@ module.exports = {
 console.log(require('./data.json.js'))
 ```
 
-#### Result
+#### Example Result
 
 The transformed output after being built by webpack is below.
 
 Note:
 
-* No dependencies on any of the modules used.
+* No dependencies on any of the modules (`fs`, `tape`) used.
 * Result of `fs.readFileSync` is baked into the output.
 * `random` key will always be the same value until next build.
 * `tape` key doesn't exist because JSON can't serialise functions.
@@ -86,6 +93,8 @@ Note:
 /***/ }
 /******/ ]);
 ```
+
+
 
 ## License
 
