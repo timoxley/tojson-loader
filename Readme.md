@@ -2,7 +2,7 @@
 
 ## Generate JSON assets at build-time
 
-If every client needs access to a shared chunk of data, and that data can be known at build time, the simplest option is to bake that data into clientside build with `tojson-loader`.
+If every client needs access to a shared chunk of data, and that data can be known at build time, a simple option is to bake that data into clientside build with `tojson-loader`.
 
 #### Potential Benefits
 
