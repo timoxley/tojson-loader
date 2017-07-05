@@ -1,16 +1,16 @@
 {
   "name": "tojson-loader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Serialize module exports as JSON. Cache generated static data as JSON at build time.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
-    "node-libs-browser": "^1.0.0",
-    "standard": "^7.1.2",
-    "tape": "^4.6.0",
-    "webpack": "^2.1.0-beta.7"
+    "node-libs-browser": "^2.0.0",
+    "standard": "^10.0.2",
+    "tape": "^4.7.0",
+    "webpack": "^3.0.0"
   },
   "scripts": {
     "test": "tape test/index.js && npm run lint",

@@ -7,8 +7,7 @@ var TEST_DIR = path.join(__dirname, '/simple')
 var TEST_FILE = path.join(TEST_DIR, '/build.js')
 
 test('setup', function (t) {
-  fs.unlink(TEST_FILE, function (err) {
-    err // noop. ignore err
+  fs.unlink(TEST_FILE, function (_) {
     t.end()
   })
 })
