@@ -1,5 +1,8 @@
 # tojson-loader
 
+[![NPM](https://nodei.co/npm/tojson-loader.png)](https://nodei.co/npm/tojson-loader/)
+[![NPM](https://nodei.co/npm-dl/tojson-loader.png?months=3&height=2)](https://nodei.co/npm/tojson-loader/)
+
 ### Generate JSON assets at build-time
 
 [![Build Status](https://travis-ci.org/timoxley/tojson-loader.png?branch=master)](https://travis-ci.org/timoxley/tojson-loader)
