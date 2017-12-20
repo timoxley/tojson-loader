@@ -3,21 +3,19 @@
 module.exports = function toJSONLoader (code) {
   var result = this.exec(code, this.resourcePath)
 
-  if ('function' !== typeof result) {
+  if (typeof result !== 'function') {
     return toJSON(result)
   }
 
   var callback = this.async()
   if (!callback) {
     if (result.sync) {
-      if ('function' === typeof result.sync) {
+      if (typeof result.sync === 'function') {
         return toJSON(result.async())
-      }
-      else {
+      } else {
         return toJSON(result.async)
       }
     }
-    
     this.emitError('Resource ' + this.resourcePath + ' needs async but it is not supported')
   }
 
