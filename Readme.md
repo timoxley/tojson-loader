@@ -64,6 +64,32 @@ module.exports = {
 }
 ```
 
+### Same example with async `.json.js` file
+
+```js
+// data.json.js
+
+var fs = require('fs')
+
+// If module exports a function, it becomes asynchronous.
+// After all hard work it should send results to resolve function
+module.exports = function (resolve) {
+  fs.readFile(__dirname + '/../../Readme.md', 'utf8', function (err, readme) {
+    readme = readme.split('\n')[0] // (just grab header for demo)
+
+    // any other dependencies that are only used in here won't be included in bundle
+    var tape = require('tape') // some random dependency
+
+    // Resulting object should be sent to resolve function
+    resolve({
+      readme: readme,
+      tape: tape, // tape happens to be a function so it won't serialise.
+      random: Math.random(), // will be fixed to whatever value is generated at compile-time
+    })
+  })
+}
+```
+
 ```js
 // index.js
 console.log(require('./data.json.js'))
